@@ -61,15 +61,15 @@ def stream_markup_timer(_, chat_id, played, dur):
                 callback_data="GetTimer",
             )
         ],[  
-            InlineKeyboardButton(text="𝖤̨𝖭́𝖣", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(text="𝖱𝖾𝗌𝗎𝗆𝖾", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="𝖯𝖺𝗎𝗌𝖾", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="𝗘𝗻𝗗", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="𝗥𝗲𝗦𝘂𝗠𝗲", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="𝗣𝗲𝗨𝘀𝗘", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text="𝖢𝗁𝖺𝗇𝗇𝖾𝗅 ", url=f"https://t.me/SORCE_JACK"),
-            InlineKeyboardButton(text="𝖦𝗋𝗈𝗎𝗉", url=f"https://t.me/Tm_JACK"),
+            InlineKeyboardButton(text="𝗧𝗲𝗠 𝗝𝗮𝗖𝗞 ", url=f"https://t.me/SOURCE_JACK"),
+            InlineKeyboardButton(text="𝗚𝗥𝗼𝗨𝗽", url=f"https://t.me/Tm_JACK"),
         ],[
-            InlineKeyboardButton(text="- 𝗝 𝗮 𝗖 ! 𝗞 .", url=f"https://t.me/YeYvYe"),
+            InlineKeyboardButton(text="𖥻 𝖳𝗁𝖾 𓏺 𝖺𝖻𝖽𝗈 .🇵🇸", url=f"https://t.me/YeYvYe"),
         ],[
             InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك⚡", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
@@ -79,15 +79,15 @@ def stream_markup_timer(_, chat_id, played, dur):
 def stream_markup(_, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(text="𝖤̨𝖭́𝖣", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(text="𝖱𝖾𝗌𝗎𝗆𝖾", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="𝖯𝖺𝗎𝗌𝖾", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="𝗘𝗻𝗗", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="𝗥𝗲𝗦𝘂𝗠𝗲", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="𝗣𝗲𝗨𝘀𝗘", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text="𝖢𝗁𝖺𝗇𝗇𝖾𝗅 ", url=f"https://t.me/SORCE_JACK"),
-            InlineKeyboardButton(text="𝖦𝗋𝗈𝗎𝗉", url=f"https://t.me/Tm_JACK"),
+            InlineKeyboardButton(text="𝗧𝗲𝗠 𝗝𝗮𝗖𝗞 ", url=f"https://t.me/SOURCE_JACK"),
+            InlineKeyboardButton(text="𝗚𝗥𝗼𝗨𝗽", url=f"https://t.me/Tm_JACK"),
         ],[
-            InlineKeyboardButton(text="- 𝗝 𝗮 𝗖 ! 𝗞 .", url=f"https://t.me/YeYvYe"),
+            InlineKeyboardButton(text="𖥻 𝖳𝗁𝖾 𓏺 𝖺𝖻𝖽𝗈 .🇵🇸", url=f"https://t.me/YeYvYe"),
         ],[
             InlineKeyboardButton(text="⚡اضف البوت الي مجموعتك او قناتك", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
@@ -157,7 +157,7 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
                 callback_data=f"forceclose {query}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="𝖱𝖾𝗌𝗎𝗆𝖾",
+                text="𝗥𝗲𝗦𝘂𝗠𝗲",
                 callback_data=f"slider F|{query_type}|{query}|{user_id}|{channel}|{fplay}",
             ),
         ],
