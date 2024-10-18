@@ -3,14 +3,11 @@ from pyrogram.types import InlineKeyboardButton
 import config
 from AbdoX import app
 
-
 def start_panel(_):
     buttons = [
         [
-            InlineKeyboardButton(
-                text=_["S_B_1"], url=f"https://t.me/{app.username}?startgroup=true"
-            ),
-            InlineKeyboardButton(text=_["S_B_6"], url=config.OWNER_CHANNEL),
+            InlineKeyboardButton(text="𝗧𝗲𝗠 𝗝𝗮𝗖𝗞", url=f"https://t.me/SOURCE_JACK") ,
+            InlineKeyboardButton(text="𝗚𝗥𝗼𝗨𝗽", url= "https://t.me/Tm_JACK"),
         ],
     ]
     return buttons
@@ -20,17 +17,18 @@ def private_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text="اضغط لاضافتي لمجموعتك✅",
                 url=f"https://t.me/{app.username}?startgroup=true",
             )
         ],
+        
         [
-            InlineKeyboardButton(text=_["S_B_3"], url=config.YAFA_CHANNEL),
-            InlineKeyboardButton(text=_["S_B_7"], user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="𖥻 𝖳𝗁𝖾 𓏺 𝖺𝖻𝖽𝗈 .🇵🇸", url=f"https://t.me/YeYvYe"),
+            InlineKeyboardButton(text="𝗚𝗥𝗼𝘂𝗽", url=f"https://t.me/Tm_JACK"), 
         ],
         [
-            InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
             
+            InlineKeyboardButton(text="𝗧𝗲𝗠 𝗝𝗮𝗖𝗞", url=f"https://t.me/SOURCE_JACK") , 
         ],
     ]
     return buttons
