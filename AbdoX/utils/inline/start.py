@@ -7,7 +7,7 @@ def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(text="𝗧𝗲𝗠 𝗝𝗮𝗖𝗞", url=f"https://t.me/SOURCE_JACK") ,
-            InlineKeyboardButton(text="- 𝐆 𝐑 𝐎 𝐔 𝐏 ↺", url= "https://t.me/Q_CR_3"),
+            InlineKeyboardButton(text="𝗚𝗥𝗼𝗨𝗽", url= "https://t.me/Tm_JACK"),
         ],
     ]
     return buttons
