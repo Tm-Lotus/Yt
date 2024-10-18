@@ -43,7 +43,7 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/I1_35")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/SOURCE_JACK")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -94,21 +94,21 @@ command = ["/"]
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://te.legra.ph/file/1284f8759835ecbf34199.jpg"
+    "START_IMG_URL", "https://t.me/tmjack1/18"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg"
+    "PING_IMG_URL", "https://t.me/tmjack1/18"
 )
-PLAYLIST_IMG_URL = "https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg"
-STATS_IMG_URL = "https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg"
-TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg"
-TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg"
-STREAM_IMG_URL ="https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg"
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg"
+PLAYLIST_IMG_URL = "https://t.me/tmjack1/18"
+STATS_IMG_URL = "https://t.me/tmjack1/18"
+TELEGRAM_AUDIO_URL = "https://t.me/tmjack1/18"
+TELEGRAM_VIDEO_URL = "https://t.me/tmjack1/18"
+STREAM_IMG_URL ="https://t.me/tmjack1/18"
+SOUNCLOUD_IMG_URL = "https://t.me/tmjack1/18"
+YOUTUBE_IMG_URL = "https://t.me/tmjack1/18"
+SPOTIFY_ARTIST_IMG_URL = "https://t.me/tmjack1/18"
+SPOTIFY_ALBUM_IMG_URL = "https://t.me/tmjack1/18"
+SPOTIFY_PLAYLIST_IMG_URL = "https://t.me/tmjack1/18"
 
 
 def time_to_seconds(time):
