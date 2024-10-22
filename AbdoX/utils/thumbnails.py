@@ -1,15 +1,15 @@
 import os
 import re
+import textwrap
 
 import aiofiles
 import aiohttp
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
-from unidecode import unidecode
+from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
+                 ImageFont, ImageOps)
 from youtubesearchpython.__future__ import VideosSearch
 
+from config import YOUTUBE_IMG_URL, OWNER_ID
 from AbdoX import app
-from config import YOUTUBE_IMG_URL
-
 
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
@@ -142,46 +142,3 @@ async def get_thumb(videoid):
     except Exception:
         await app.send_message("z0hary", Exception)
         return YOUTUBE_IMG_URL
-                    stroke_fill="white",
-                    font=font,
-                )
-            if j == 0:
-                j += 1
-                draw.text(
-                    (600, 280),
-                    f"{line}",
-                    fill="white",
-                    stroke_width=1,
-                    stroke_fill="white",
-                    font=font,
-                )
-
-        draw.text(
-            (600, 450),
-            f"Views : {views[:23]}",
-            (255, 255, 255),
-            font=arial,
-        )
-        draw.text(
-            (600, 500),
-            f"Duration : {duration[:23]} Mins",
-            (255, 255, 255),
-            font=arial,
-        )
-        draw.text(
-            (600, 550),
-            f"Channel : {channel}",
-            (255, 255, 255),
-            font=arial,
-        )
-        try:
-            os.remove(f"cache/thumb{videoid}.png")
-        except:
-            pass
-        background.save(f"cache/{videoid}.png")
-        return f"cache/{videoid}.png"
-    except Exception:
-        await app.send_message("z0hary", Exception)
-        return YOUTUBE_IMG_URL
-
-
