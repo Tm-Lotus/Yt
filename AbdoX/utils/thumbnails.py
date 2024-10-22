@@ -20,17 +20,9 @@ def changeImageSize(maxWidth, maxHeight, image):
     return newImage
 
 
-def changeImageSize(maxWidth, maxHeight, image):
-    widthRatio = maxWidth / image.size[0]
-    heightRatio = maxHeight / image.size[1]
-    newWidth = int(widthRatio * image.size[0])
-    newHeight = int(heightRatio * image.size[1])
-    newImage = image.resize((newWidth, newHeight))
-    return newImage
-
-async def gen_bot_caesar(client, bot_username, OWNER_ID, CASER, message, videoid):
-    if os.path.isfile(f"photos/{videoid}_{bot_username}.png"):
-        return f"photos/{videoid}_{bot_username}.png"
+async def get_thumb(videoid):
+    if os.path.isfile(f"cache/{videoid}.png"):
+        return f"cache/{videoid}.png"
 
     url = f"https://www.youtube.com/watch?v={videoid}"
     try:
@@ -59,40 +51,137 @@ async def gen_bot_caesar(client, bot_username, OWNER_ID, CASER, message, videoid
         async with aiohttp.ClientSession() as session:
             async with session.get(thumbnail) as resp:
                 if resp.status == 200:
-                    f = await aiofiles.open(f"thumb{videoid}.png", mode="wb")
+                    f = await aiofiles.open(
+                        f"cache/thumb{videoid}.png", mode="wb"
+                    )
                     await f.write(await resp.read())
                     await f.close()
-
-        youtube = Image.open(f"thumb{videoid}.png")
+        owner = int(OWNER_ID)
+        wxyz = await app.download_media(
+              (await app.get_users(owner)).photo.big_file_id,
+              file_name=f"{owner}.jpg",
+        )
+        wxy = Image.open(wxyz)
+        youtube = Image.open(f"cache/thumb{videoid}.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
-        background = image2.filter(filter=ImageFilter.BoxBlur(10))
+        background = image2.filter(filter=ImageFilter.BoxBlur(20))
         enhancer = ImageEnhance.Brightness(background)
         background = enhancer.enhance(0.6)
+        Xcenter = wxy.width / 2
+        Ycenter = wxy.height / 2
+        x1 = Xcenter - 250
+        y1 = Ycenter - 250
+        x2 = Xcenter + 250
+        y2 = Ycenter + 250
+        logo = wxy.crop((x1, y1, x2, y2))
+        logo.thumbnail((520, 520), Image.ANTIALIAS)
+        logo = ImageOps.expand(logo, border=15, fill="white")
+        background.paste(logo, (50, 100))
         draw = ImageDraw.Draw(background)
-        arial = ImageFont.truetype("font.ttf", 70)
-        caesa = ImageFont.truetype("font.ttf", 45)        
-        box_size = (500, 500)
-        box_position = (40, 100)
-        box_image = Image.new("RGBA", box_size, (255, 255, 255, 0))
-        box_draw = ImageDraw.Draw(box_image)
-        box_draw.ellipse([(0, 0), box_size], outline="white", width=5)               
-        wxyz = await client.get_chat(OWNER_ID)
-        CAR = wxyz.username
-        vvv = wxyz.photo.big_file_id
-        wxy = await client.download_media(vvv)
-        inner_image = Image.open(wxy)
-        inner_image = inner_image.resize((480, 480))
-        box_image.paste(inner_image, (10, 10))  
-        background.paste(box_image, box_position)   
-        draw.text((600, 120), "JaCK PlAYiNg", fill="white", stroke_width=2, stroke_fill="white", font=arial)     
-        draw.text((600, 420), f"{channel} | {views[:23]}", (255, 255, 255), font=caesa)        
-        draw.text((600, 490), f"Channel : {channel}", (255, 255, 255), font=caesa)       
-        draw.text((600, 350), f"Views : {views[:23]}", (255, 255, 255), font=caesa) 
-        draw.text((600, 550), f"Duration : {duration[:23]} Mins", (255, 255, 255), font=caesa)    
-        background.save(f"photos/{videoid}_{bot_username}.png")
-        os.remove(f"thumb{videoid}.png")
-        file = f"photos/{videoid}_{bot_username}.png"
-        return file
-    except Exception as e:
-        print(e)
+        font = ImageFont.truetype("AbdoX/assets/font2.ttf", 40)
+        font2 = ImageFont.truetype("AbdoX/assets/font2.ttf", 70)
+        arial = ImageFont.truetype("AbdoX/assets/font2.ttf", 30)
+        name_font = ImageFont.truetype("AbdoX/assets/font2.ttf", 30)
+        para = textwrap.wrap(title, width=32)
+        j = 0
+        draw.text(
+            (600, 150),
+            "B7R PLAYING",
+            fill="white",
+            stroke_width=2,
+            stroke_fill="white",
+            font=font2,
+        )
+        for line in para:
+            if j == 1:
+                j += 1
+                draw.text(
+                    (600, 340),
+                    f"{line}",
+                    fill="white",
+                    stroke_width=1,
+                    stroke_fill="white",
+                    font=font,
+                )
+            if j == 0:
+                j += 1
+                draw.text(
+                    (600, 280),
+                    f"{line}",
+                    fill="white",
+                    stroke_width=1,
+                    stroke_fill="white",
+                    font=font,
+                )
+
+        draw.text(
+            (600, 450),
+            f"Views : {views[:23]}",
+            (255, 255, 255),
+            font=arial,
+        )
+        draw.text(
+            (600, 500),
+            f"Duration : {duration[:23]} Mins",
+            (255, 255, 255),
+            font=arial,
+        )
+        draw.text(
+            (600, 550),
+            f"Channel : {channel}",
+            (255, 255, 255),
+            font=arial,
+        )
+        try:
+            os.remove(f"cache/thumb{videoid}.png")
+        except:
+            pass
+        background.save(f"cache/{videoid}.png")
+        return f"cache/{videoid}.png"
+    except Exception:
+        await app.send_message("z0hary", Exception)
+        return YOUTUBE_IMG_URL
+                    stroke_fill="white",
+                    font=font,
+                )
+            if j == 0:
+                j += 1
+                draw.text(
+                    (600, 280),
+                    f"{line}",
+                    fill="white",
+                    stroke_width=1,
+                    stroke_fill="white",
+                    font=font,
+                )
+
+        draw.text(
+            (600, 450),
+            f"Views : {views[:23]}",
+            (255, 255, 255),
+            font=arial,
+        )
+        draw.text(
+            (600, 500),
+            f"Duration : {duration[:23]} Mins",
+            (255, 255, 255),
+            font=arial,
+        )
+        draw.text(
+            (600, 550),
+            f"Channel : {channel}",
+            (255, 255, 255),
+            font=arial,
+        )
+        try:
+            os.remove(f"cache/thumb{videoid}.png")
+        except:
+            pass
+        background.save(f"cache/{videoid}.png")
+        return f"cache/{videoid}.png"
+    except Exception:
+        await app.send_message("z0hary", Exception)
+        return YOUTUBE_IMG_URL
+
+
