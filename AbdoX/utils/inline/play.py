@@ -66,10 +66,10 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="𝗣𝗲𝗨𝘀𝗘", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text="𝗧𝗲𝗠 𝗝𝗮𝗖𝗞 ", url=f"https://t.me/SOURCE_JACK"),
-            InlineKeyboardButton(text="𝗚𝗥𝗼𝗨𝗽", url=f"https://t.me/Tm_JACK"),
+            InlineKeyboardButton(text="𝗘𝗫𝗣𝗥𝗘𝗦𝗦", url=f"https://t.me/Source_Express"),
+            InlineKeyboardButton(text="𝗚𝗥𝗢𝗨𝗣", url=f"https://t.me/X_v_C_Y"),
         ],[
-            InlineKeyboardButton(text="𖥻 𝖳𝗁𝖾 𓏺 𝖺𝖻𝖽𝗈 .🇵🇸", url=f"https://t.me/YeYvYe"),
+            InlineKeyboardButton(text="𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝚇𝙿𝚁𝙴𝚂𝚂", url=f"https://t.me/expressource"),
         ],[
             InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك⚡", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
@@ -84,10 +84,10 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="𝗣𝗲𝗨𝘀𝗘", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text="𝗧𝗲𝗠 𝗝𝗮𝗖𝗞 ", url=f"https://t.me/SOURCE_JACK"),
-            InlineKeyboardButton(text="𝗚𝗥𝗼𝗨𝗽", url=f"https://t.me/Tm_JACK"),
+            InlineKeyboardButton(text="𝗘𝗫𝗣𝗥𝗘𝗦𝗦", url=f"https://t.me/Source_Express"),
+            InlineKeyboardButton(text="𝗚𝗥𝗢𝗨𝗣", url=f"https://t.me/X_v_C_Y"),
         ],[
-            InlineKeyboardButton(text="𖥻 𝖳𝗁𝖾 𓏺 𝖺𝖻𝖽𝗈 .🇵🇸", url=f"https://t.me/YeYvYe"),
+            InlineKeyboardButton(text="𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝚇𝙿𝚁𝙴𝚂𝚂", url=f"https://t.me/expressource"),
         ],[
             InlineKeyboardButton(text="⚡اضف البوت الي مجموعتك او قناتك", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
