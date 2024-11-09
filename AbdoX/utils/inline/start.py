@@ -6,8 +6,8 @@ from AbdoX import app
 def start_panel(_):
     buttons = [
         [
-            InlineKeyboardButton(text="𝗧𝗲𝗠 𝗝𝗮𝗖𝗞", url=f"https://t.me/SOURCE_JACK") ,
-            InlineKeyboardButton(text="𝗚𝗥𝗼𝗨𝗽", url= "https://t.me/Tm_JACK"),
+            InlineKeyboardButton(text="𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗫𝗣𝗥𝗘𝗦𝗦", url=f"https://t.me/SourceExpress") ,
+            InlineKeyboardButton(text="𝗚𝗥𝗢𝗨𝗣", url= "https://t.me/X_v_C_Y"),
         ],
     ]
     return buttons
@@ -23,12 +23,12 @@ def private_panel(_):
         ],
         
         [
-            InlineKeyboardButton(text="𖥻 𝖳𝗁𝖾 𓏺 𝖺𝖻𝖽𝗈 .🇵🇸", url=f"https://t.me/YeYvYe"),
-            InlineKeyboardButton(text="𝗚𝗥𝗼𝘂𝗽", url=f"https://t.me/Tm_JACK"), 
+            InlineKeyboardButton(text="𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝚇𝙿𝚁𝙴𝚂𝚂", url=f"https://t.me/expressource"),
+            InlineKeyboardButton(text="𝗚𝗥𝗢𝗨𝗣", url=f"https://t.me/X_v_C_Y"), 
         ],
         [
             
-            InlineKeyboardButton(text="𝗧𝗲𝗠 𝗝𝗮𝗖𝗞", url=f"https://t.me/SOURCE_JACK") , 
+            InlineKeyboardButton(text="𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗫𝗣𝗥𝗘𝗦𝗦", url=f"https://t.me/SourceExpress") , 
         ],
     ]
     return buttons
