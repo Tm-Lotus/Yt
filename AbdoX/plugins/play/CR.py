@@ -19,7 +19,7 @@ from random import  choice, randint
 )
 async def huhh(client: Client, message: Message):
     await message.reply_video(
-        video=f"https://forkgraph.zaid.pro/file/GBJQs29Z1xrN",
+        video=f"https://t.me/tmjack1/20",
         caption=f"- 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝚇𝙿𝚁𝙴𝚂𝚂.",
         reply_markup=InlineKeyboardMarkup(
             [
