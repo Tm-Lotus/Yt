@@ -2,7 +2,8 @@ import asyncio
 import importlib
 
 from pyrogram import idle
-from pytgcalls.exceptions import
+from pytgcalls.exceptions import *  # استيراد جميع الاستثناءات
+
 import config
 from AbdoX import LOGGER, app, userbot
 from AbdoX.core.call import Zelzaly
